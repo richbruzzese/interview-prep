@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import WordList from './WordList';
 
 function App() {
+  const [word, setWord] = useState('')
+  useEffect(() => {
+    const randWord = WordList[Math.floor(Math.random() * WordList.length)];
+    setWord(randWord)
+  },[])
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       Hello World
+      <h3> Random wsssord is {word} </h3>
       </header>
     </div>
   );
