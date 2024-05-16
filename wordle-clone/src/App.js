@@ -9,9 +9,21 @@ function App() {
     setWord(randWord)
   },[])
   
+  // create an input that will accept a word
+  // compare to the letters within the set word
+  // determine if letters match
+  // highlight which match and which dont
+  // x number of tries before death
+ const checkWords = () => {
+  // use this to check words
+ }
+
   return (
     <div className="App">
       <header className="App-header">
+      {/* need an input in order to accept the word
+     */}
+      <input></input>
        Hello World
       <h3> Random wsssord is {word} </h3>
       </header>
